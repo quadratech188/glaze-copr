@@ -23,7 +23,11 @@ object memory, simplifying interfaces and offering incredible performance.
 %forgeautosetup
 
 %conf
-%cmake -Dglaze_DEVELOPER_MODE=OFF -DBUILD_TESTING=OFF
+# The cmake(glaze) provide is only found when cmake files are in that dir
+%cmake \
+	-Dglaze_DEVELOPER_MODE=OFF \
+	-DBUILD_TESTING=OFF \
+	-Dglaze_INSTALL_CMAKEDIR="%{_libdir}/cmake/glaze"
 
 %build
 %cmake_build
@@ -38,7 +42,7 @@ object memory, simplifying interfaces and offering incredible performance.
 %license LICENSE
 %doc README.md
 %{_includedir}/glaze/
-%{_datadir}/glaze/
+%{_libdir}/cmake/glaze/
 
 %changelog
 %autochangelog
