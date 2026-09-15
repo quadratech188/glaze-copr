@@ -1,7 +1,7 @@
 %global forgeurl https://github.com/stephenberry/glaze
 
 Name: glaze
-Version: 8.3.0
+Version: 8.4.0
 Release: %autorelease
 Summary: Extremely fast, in memory, serialization, reflection, and RPC library for C++. JSON, BEVE, BSON, CBOR, CSV, JSONB, MessagePack, TOML, YAML, EETF
 
