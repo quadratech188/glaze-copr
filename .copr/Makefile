@@ -1,5 +1,7 @@
 srpm:
-	-dnf -y install spectool rpmautospec rpkg
+	-dnf -y install spectool rpmautospec rpm-build
+	rpmautospec process-distgit $(spec) $(spec)
 	spectool -g $(spec)
-	rpmautospec process-distgit $(spec) $(outdir)/$(notdir $(spec))
-	rpkg srpm --spec $(outdir)/$(notdir $(spec)) --outdir $(outdir)
+	rpmbuild -bs $(spec) \
+		--define "_sourcedir $$(pwd)" \
+		--define "_srcrpmdir $(abspath $(outdir))"

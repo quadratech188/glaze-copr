@@ -9,6 +9,7 @@ Summary: Extremely fast, in memory, serialization, reflection, and RPC library f
 License: MIT
 URL: %{forgeurl}
 Source0: %{forgesource}
+Patch0: 2977.patch
 
 BuildRequires: cmake
 BuildRequires: g++
@@ -20,7 +21,7 @@ One of the fastest JSON libraries in the world. Glaze reads and writes from
 object memory, simplifying interfaces and offering incredible performance.
 
 %prep
-%forgeautosetup
+%forgeautosetup -p1
 
 %conf
 # The cmake(glaze) provide is only found when cmake files are in that dir
