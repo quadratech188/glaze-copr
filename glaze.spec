@@ -9,7 +9,6 @@ Summary: Extremely fast, in memory, serialization, reflection, and RPC library f
 License: MIT
 URL: %{forgeurl}
 Source0: %{forgesource}
-Patch0: 2977.patch
 
 BuildRequires: cmake
 BuildRequires: g++
